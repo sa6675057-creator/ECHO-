@@ -1,0 +1,422 @@
+
+/* ==========================================
+   ECHO - WASTE ANALYZER
+   Professional Dashboard Design
+========================================== */
+
+.waste-hero {
+    background: linear-gradient(120deg, #294d38, #64816b);
+    border-radius: 20px;
+    padding: 48px 44px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 280px;
+    margin-bottom: 30px;
+}
+
+.waste-hero h1 {
+    font-size: 38px;
+    line-height: 1.35;
+    margin: 22px 0 14px;
+}
+
+.waste-hero h1 span {
+    color: #d6e8b5;
+}
+
+.waste-hero p {
+    color: #e5eee5;
+    font-size: 14px;
+    max-width: 480px;
+    line-height: 1.7;
+}
+
+.waste-hero-btn {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 13px 21px;
+    background: #f4f5e9;
+    color: #294d38;
+    text-decoration: none;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.waste-hero-btn:hover {
+    background: #dce9c9;
+    transform: translateY(-2px);
+}
+
+.waste-illustration {
+    font-size: 85px;
+    margin-right: 35px;
+}
+
+
+/* ==========================================
+   STATISTICS
+========================================== */
+
+.waste-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.waste-stat-card {
+    background: white;
+    border: 1px solid #e7ebe4;
+    border-radius: 15px;
+    padding: 24px;
+    transition: 0.25s;
+}
+
+.waste-stat-card:hover {
+    transform: translateY(-3px);
+    border-color: #a9bca9;
+}
+
+.waste-stat-card span {
+    color: #829087;
+    font-size: 13px;
+}
+
+.waste-stat-card h2 {
+    color: #294d38;
+    font-size: 25px;
+    margin: 15px 0 9px;
+    overflow-wrap: anywhere;
+}
+
+.waste-stat-card p {
+    color: #9aa49d;
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   ANALYTICS SECTION
+========================================== */
+
+.waste-analytics {
+    background: white;
+    border: 1px solid #e7ebe4;
+    border-radius: 17px;
+    padding: 27px;
+    margin-bottom: 25px;
+}
+
+.analytics-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.analytics-heading h2 {
+    color: #263b30;
+    font-size: 22px;
+}
+
+.analytics-heading p {
+    color: #849087;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.live-indicator {
+    color: #4f7958;
+    background: #edf4ec;
+    padding: 9px 13px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 20px;
+}
+
+.analytics-card {
+    background: #fafbf8;
+    border: 1px solid #edf0e9;
+    border-radius: 13px;
+    padding: 23px;
+    min-width: 0;
+}
+
+.analytics-card h3 {
+    color: #294d38;
+    font-size: 17px;
+}
+
+.analytics-description {
+    color: #929d94;
+    font-size: 12px;
+    margin-top: 8px;
+    margin-bottom: 25px;
+}
+
+.analytics-empty {
+    text-align: center;
+    padding: 35px 10px;
+    color: #929d94;
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   CATEGORY ANALYSIS
+========================================== */
+
+.category-row {
+    margin-bottom: 22px;
+}
+
+.category-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 9px;
+    font-size: 13px;
+}
+
+.category-info span {
+    color: #627267;
+}
+
+.category-info strong {
+    color: #294d38;
+}
+
+.category-progress {
+    height: 9px;
+    background: #e9eee6;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.category-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #52765b, #91ae83);
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+
+/* ==========================================
+   FOOD WASTE SCORE
+========================================== */
+
+.waste-score-container {
+    padding-top: 15px;
+}
+
+.waste-score {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.waste-score strong {
+    color: #52765b;
+    font-size: 62px;
+    font-weight: 700;
+}
+
+.waste-score span {
+    color: #9aa49d;
+    font-size: 17px;
+}
+
+.score-progress {
+    height: 12px;
+    background: #e9eee6;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.score-progress div {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #52765b, #91ae83);
+    border-radius: 20px;
+    transition: width 0.6s ease;
+}
+
+#wasteScore {
+    transition: 0.3s;
+}
+
+#wasteScore + span {
+    color: #9aa49d;
+}
+
+.waste-score-container > p {
+    margin-top: 17px;
+    color: #718176;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   SMART RECOMMENDATIONS
+========================================== */
+
+.recommendations-section {
+    background: white;
+    border: 1px solid #e7ebe4;
+    border-radius: 17px;
+    padding: 27px;
+    margin-bottom: 25px;
+}
+
+.recommendations-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.recommendations-heading h2 {
+    color: #263b30;
+    font-size: 22px;
+}
+
+.recommendations-heading p {
+    color: #849087;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.recommendations-heading > span {
+    color: #52765b;
+    background: #edf4ec;
+    padding: 9px 13px;
+    border-radius: 20px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.recommendation-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 19px;
+    background: #f8faf6;
+    border: 1px solid #edf0e9;
+    border-radius: 12px;
+    margin-bottom: 13px;
+    transition: 0.2s;
+}
+
+.recommendation-card:hover {
+    border-color: #a9bca9;
+    transform: translateX(3px);
+}
+
+.recommendation-icon {
+    min-width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8f0e5;
+    border-radius: 11px;
+    font-size: 20px;
+}
+
+.recommendation-content h3 {
+    color: #294d38;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.recommendation-content p {
+    color: #849087;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.recommendation-empty {
+    background: #f8faf6;
+    padding: 35px 15px;
+    text-align: center;
+    color: #87948a;
+    border-radius: 12px;
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 1100px) {
+
+    .waste-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .waste-hero {
+        padding: 30px 22px;
+        min-height: auto;
+    }
+
+    .waste-hero h1 {
+        font-size: 27px;
+    }
+
+    .waste-illustration {
+        font-size: 45px;
+        margin-right: 0;
+    }
+
+    .waste-stats {
+        gap: 10px;
+    }
+
+    .waste-stat-card {
+        padding: 16px;
+    }
+
+    .waste-stat-card h2 {
+        font-size: 20px;
+    }
+
+    .waste-analytics,
+    .recommendations-section {
+        padding: 18px;
+    }
+
+    .analytics-heading,
+    .recommendations-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .recommendation-card {
+        padding: 14px;
+    }
+
+}

@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ECHO - Smart Food Waste Detection and Management System">
+    <title>ECHO | Smart Food Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">E</div>
+            <span>ECHO</span>
+        </div>
+
+        <p class="menu-label">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+
+            <a href="index.html" class="nav-link active">
+                <span>▦</span> Dashboard
+            </a>
+
+            <a href="pantry.html" class="nav-link">
+                <span>▤</span> My Pantry
+            </a>
+
+            <a href="expiry.html" class="nav-link">
+                <span>◷</span> Expiry Tracker
+            </a>
+
+            <a href="waste.html" class="nav-link">
+                <span>♧</span> Waste Analyzer
+            </a>
+
+            <a href="smart.html" class="nav-link">
+                <span>✧</span> Smart Suggestions
+            </a>
+
+            <a href="reports.html" class="nav-link">
+                <span>▥</span> Reports
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>SMART LIVING</p>
+            <h3>Less Waste.<br>More Value.</h3>
+            <span>Make every resource count.</span>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <p class="date-label">YOUR SMART FOOD COMPANION</p>
+                <h2>Dashboard</h2>
+            </div>
+
+            <div class="profile">
+                <div class="profile-avatar">U</div>
+                <div>
+                    <strong>My Account</strong>
+                    <p>Personal Dashboard</p>
+                </div>
+            </div>
+
+        </header>
+
+        <section class="welcome-section">
+
+            <div>
+                <span class="welcome-tag">WELCOME TO ECHO</span>
+
+                <h1>
+                    Manage smarter.<br>
+                    <span>Waste less.</span>
+                </h1>
+
+                <p>
+                    Take control of your food inventory and make every item count.
+                </p>
+
+                <a href="pantry.html" class="primary-btn">
+                    Explore My Pantry ↗
+                </a>
+            </div>
+
+        </section>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <p>Total Products</p>
+                <h2 id="dashboardTotal">0</h2>
+                <span>Items in your pantry</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Expiring Soon</p>
+                <h2 id="dashboardExpiring">0</h2>
+                <span>Need your attention</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Expired Products</p>
+                <h2 id="dashboardExpired">0</h2>
+                <span>Products past expiry date</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Potential Waste</p>
+                <h2 id="dashboardWaste">0 EGP</h2>
+                <span>Value of expired products</span>
+            </div>
+
+        </section>
+
+        <section class="bottom-grid">
+
+            <div class="content-card">
+
+                <div class="card-heading">
+                    <h3>Expiry Overview</h3>
+                    <a href="expiry.html">View All →</a>
+                </div>
+
+                <div id="dashboardExpiryList" class="expiry-list">
+
+                    <div class="empty-state">
+                        <div class="empty-icon">◷</div>
+                        <h3>No products added yet</h3>
+                        <p>Your upcoming expiry dates will appear here.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="content-card score-card">
+
+                <h3>Waste Intelligence Score</h3>
+
+                <div class="score-number">
+                    <span id="dashboardScore">--</span><span>/100</span>
+                </div>
+
+                <p id="dashboardScoreMessage">
+                    Your food management performance.
+                </p>
+
+                <div class="score-bar">
+                    <div id="dashboardScoreBar"></div>
+                </div>
+
+                <small>Calculated from your pantry expiry status</small>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>© 2026 ECHO. Smart Living Starts Here.</p>
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/app.js"></script>
+<button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+    ↑
+</button>
+
+<script src="js/app.js"></script>
+<script src="js/back-to-top.js"></script>
+</body>
+</body>
+</html>

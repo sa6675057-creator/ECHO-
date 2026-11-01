@@ -1,0 +1,923 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover ECHO - Smarter Food Management, Less Waste.">
+    <title>About ECHO | Smart Food Management</title>
+
+    <style>
+        :root {
+            --green: #55785d;
+            --dark-green: #304b38;
+            --light-green: #e8eee5;
+            --cream: #f8f7f0;
+            --white: #ffffff;
+            --text: #26382b;
+            --muted: #788477;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation */
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 8%;
+            animation: fadeDown 0.8s ease both;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 25px;
+            font-weight: 800;
+            color: var(--dark-green);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: var(--green);
+            color: white;
+            display: grid;
+            place-items: center;
+            font-size: 23px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            color: var(--muted);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: var(--green);
+        }
+
+        .nav-button {
+            background: var(--green);
+            color: white;
+            padding: 12px 22px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .nav-button:hover {
+            background: var(--dark-green);
+            transform: translateY(-3px);
+        }
+
+        /* Hero */
+
+        .hero {
+            min-height: 570px;
+            padding: 85px 8%;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeUp 1s ease both;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--light-green);
+            color: var(--green);
+            padding: 10px 17px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 5vw, 67px);
+            line-height: 1.13;
+            letter-spacing: -2.5px;
+            color: var(--dark-green);
+            margin-bottom: 24px;
+        }
+
+        .hero h1 span {
+            color: var(--green);
+        }
+
+        .hero p {
+            max-width: 530px;
+            color: var(--muted);
+            line-height: 1.9;
+            font-size: 15px;
+            margin-bottom: 32px;
+        }
+
+        .hero-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--green);
+            color: white;
+            padding: 16px 25px;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: 0.3s;
+            box-shadow: 0 10px 25px rgba(85, 120, 93, 0.18);
+        }
+
+        .hero-button:hover {
+            background: var(--dark-green);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(48, 75, 56, 0.2);
+        }
+
+        /* Hero Visual */
+
+        .hero-visual {
+            min-height: 390px;
+            position: relative;
+            display: grid;
+            place-items: center;
+            animation: fadeIn 1.3s ease both;
+        }
+
+        .visual-circle {
+            width: 310px;
+            height: 310px;
+            border-radius: 50%;
+            background: var(--light-green);
+            display: grid;
+            place-items: center;
+            position: relative;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .visual-inner {
+            width: 225px;
+            height: 225px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #77977a, #405f48);
+            display: grid;
+            place-items: center;
+            color: white;
+            font-size: 100px;
+            box-shadow: 0 25px 50px rgba(48, 75, 56, 0.2);
+        }
+
+        .floating-card {
+            position: absolute;
+            background: white;
+            padding: 16px 20px;
+            border-radius: 14px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+            font-size: 13px;
+            font-weight: 700;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .floating-card.one {
+            top: 55px;
+            left: 0;
+        }
+
+        .floating-card.two {
+            bottom: 55px;
+            right: 0;
+            animation-delay: 1s;
+        }
+
+        .floating-card span {
+            color: var(--green);
+            display: block;
+            font-size: 11px;
+            margin-top: 5px;
+        }
+
+        .decor {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: rgba(85, 120, 93, 0.06);
+            right: -60px;
+            top: 20px;
+        }
+
+        /* Section General */
+
+        .section {
+            padding: 85px 8%;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 50px;
+        }
+
+        .section-heading span {
+            color: var(--green);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .section-heading h2 {
+            font-size: 36px;
+            color: var(--dark-green);
+            margin: 15px 0;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        /* Mission */
+
+        .mission {
+            background: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .mission-visual {
+            min-height: 300px;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #e7eee3, #f7f4e8);
+            display: grid;
+            place-items: center;
+            font-size: 110px;
+            overflow: hidden;
+        }
+
+        .mission-content h2 {
+            font-size: 36px;
+            color: var(--dark-green);
+            margin-bottom: 20px;
+        }
+
+        .mission-content p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 2;
+            margin-bottom: 15px;
+        }
+
+        .mission-line {
+            width: 65px;
+            height: 4px;
+            background: var(--green);
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        /* Features */
+
+        .features {
+            background: var(--cream);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        /* Updated Feature Cards Animation */
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid #edf0e9;
+            transition:
+                transform 0.4s ease,
+                box-shadow 0.4s ease,
+                border-color 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Animated Green Line */
+
+        .feature-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 3px;
+            background: var(--green);
+            transition: left 0.4s ease;
+        }
+
+        .feature-card:hover::before {
+            left: 0;
+        }
+
+        /* Card Hover Effect */
+
+        .feature-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 18px 35px rgba(48, 75, 56, 0.12);
+            border-color: #d5e1d3;
+        }
+
+        .feature-icon {
+            width: 55px;
+            height: 55px;
+            background: var(--light-green);
+            color: var(--green);
+            display: grid;
+            place-items: center;
+            border-radius: 15px;
+            font-size: 25px;
+            margin-bottom: 22px;
+            transition: transform 0.4s ease, background 0.4s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: rotate(-8deg) scale(1.1);
+            background: #dce8d9;
+        }
+
+        .feature-card h3 {
+            color: var(--dark-green);
+            font-size: 17px;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        /* Call To Action */
+
+        .cta {
+            margin: 30px 8% 85px;
+            padding: 65px 30px;
+            text-align: center;
+            border-radius: 25px;
+            background: linear-gradient(120deg, #304b38, #63836a);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta h2 {
+            font-size: 35px;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta p {
+            color: #e1e9df;
+            font-size: 14px;
+            margin-bottom: 28px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta a {
+            display: inline-block;
+            background: white;
+            color: var(--dark-green);
+            padding: 15px 27px;
+            border-radius: 10px;
+            font-weight: 800;
+            transition: 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta a:hover {
+            transform: scale(1.06);
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 28px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            color: var(--muted);
+            font-size: 12px;
+            border-top: 1px solid #e8e9df;
+        }
+
+        footer strong {
+            color: var(--dark-green);
+            font-size: 17px;
+        }
+
+        /* Scroll Animation */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Keyframes */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+/* Back To Top Home Button */
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 16px;
+    background: var(--green);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(48, 75, 56, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.35s ease;
+    z-index: 9999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--dark-green);
+    transform: translateY(-5px);
+}
+
+.back-to-top svg {
+    width: 25px;
+    height: 25px;
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+@media (max-width: 600px) {
+    .back-to-top {
+        right: 18px;
+        bottom: 20px;
+        width: 46px;
+        height: 46px;
+    }
+}
+        /* Responsive */
+
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .mission {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                padding: 18px 5%;
+            }
+
+            .nav-links {
+                gap: 12px;
+                font-size: 11px;
+            }
+
+            .nav-links a:not(.nav-button) {
+                display: none;
+            }
+
+            .hero {
+                padding: 60px 6%;
+            }
+
+            .hero h1 {
+                letter-spacing: -1.5px;
+            }
+
+            .hero-visual {
+                min-height: 320px;
+            }
+
+            .visual-circle {
+                width: 240px;
+                height: 240px;
+            }
+
+            .visual-inner {
+                width: 175px;
+                height: 175px;
+                font-size: 75px;
+            }
+
+            .floating-card.one {
+                left: -5px;
+            }
+
+            .floating-card.two {
+                right: -5px;
+            }
+
+            .section {
+                padding: 65px 6%;
+            }
+
+            .section-heading h2,
+            .mission-content h2 {
+                font-size: 28px;
+            }
+
+            .mission-visual {
+                min-height: 230px;
+                font-size: 85px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta {
+                margin: 15px 5% 55px;
+                padding: 50px 20px;
+            }
+
+            .cta h2 {
+                font-size: 27px;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Accessibility */
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+        <a href="about.html" class="logo">
+            <span class="logo-icon">E</span>
+            ECHO
+        </a>
+
+        <div class="nav-links">
+            <a href="#mission">Our Mission</a>
+            <a href="#features">Features</a>
+            <a href="index.html" class="nav-button">Dashboard ↗</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="decor"></div>
+
+        <div class="hero-content">
+            <span class="tag">SMART FOOD MANAGEMENT SYSTEM</span>
+
+            <h1>
+                Smarter Food<br>
+                Management.<br>
+                <span>Less Waste.</span>
+            </h1>
+
+            <p>
+                ECHO helps you manage your food inventory, track expiration
+                dates, and reduce unnecessary food waste through a simple
+                and intelligent dashboard.
+            </p>
+
+            <a href="index.html" class="hero-button">
+                Explore ECHO <span>↗</span>
+            </a>
+        </div>
+
+        <div class="hero-visual">
+            <div class="visual-circle">
+                <div class="visual-inner">♧</div>
+            </div>
+
+            <div class="floating-card one">
+                ✓ Smart Tracking
+                <span>Stay organized</span>
+            </div>
+
+            <div class="floating-card two">
+                ♻ Less Food Waste
+                <span>Make every item count</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Mission Section -->
+
+    <section class="section mission reveal" id="mission">
+
+        <div class="mission-visual">
+            🌱
+        </div>
+
+        <div class="mission-content">
+            <div class="mission-line"></div>
+
+            <span class="tag">OUR MISSION</span>
+
+            <h2>Small Changes.<br>Meaningful Impact.</h2>
+
+            <p>
+                Food waste is a daily challenge that affects households
+                and the environment. Many food items are forgotten or
+                expire before they can be used.
+            </p>
+
+            <p>
+                ECHO aims to make food management easier by helping users
+                organize their pantry, monitor expiration dates, and make
+                better decisions about their food.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Features Section -->
+
+    <section class="section features" id="features">
+
+        <div class="section-heading reveal">
+            <span>WHAT ECHO OFFERS</span>
+            <h2>Everything You Need in One Place</h2>
+            <p>
+                Simple tools designed to help you stay organized
+                and make smarter food management decisions.
+            </p>
+        </div>
+
+        <div class="features-grid">
+
+            <div class="feature-card reveal">
+                <div class="feature-icon">▤</div>
+                <h3>Food Inventory</h3>
+                <p>
+                    Add, edit, search, and organize your food products
+                    in one convenient place.
+                </p>
+            </div>
+
+            <div class="feature-card reveal">
+                <div class="feature-icon">◷</div>
+                <h3>Expiry Tracking</h3>
+                <p>
+                    Monitor expiration dates and identify products
+                    that need your attention.
+                </p>
+            </div>
+
+            <div class="feature-card reveal">
+                <div class="feature-icon">✧</div>
+                <h3>Smart Suggestions</h3>
+                <p>
+                    Get useful suggestions to help prioritize
+                    products and reduce food waste.
+                </p>
+            </div>
+
+            <div class="feature-card reveal">
+                <div class="feature-icon">♧</div>
+                <h3>Waste Analysis</h3>
+                <p>
+                    Understand expired products and monitor
+                    their estimated financial value.
+                </p>
+            </div>
+
+            <div class="feature-card reveal">
+                <div class="feature-icon">▥</div>
+                <h3>Reports & Statistics</h3>
+                <p>
+                    Explore inventory statistics and review
+                    your food management performance.
+                </p>
+            </div>
+
+            <div class="feature-card reveal">
+                <div class="feature-icon">♡</div>
+                <h3>Smarter Living</h3>
+                <p>
+                    Build better food management habits
+                    through organization and awareness.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Call To Action -->
+
+    <section class="cta reveal">
+        <h2>Make Every Item Count.</h2>
+
+        <p>
+            Start managing your food inventory in a smarter way with ECHO.
+        </p>
+
+        <a href="index.html">Go to Dashboard ↗</a>
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+        <strong>ECHO</strong>
+        <p>© 2026 ECHO. Smart Living Starts Here.</p>
+        <p>Less Waste. More Value.</p>
+    </footer>
+
+
+
+
+    <!-- Scroll Animation Script -->
+
+    <script>
+        const revealElements = document.querySelectorAll(".reveal");
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12
+        });
+
+        revealElements.forEach((element) => {
+            revealObserver.observe(element);
+        });
+    </script>
+<button id="backToTop" class="back-to-top"
+        aria-label="Back to top" title="Back to top">
+
+    <svg viewBox="0 0 24 24">
+        <path d="M3 10.5L12 3L21 10.5"></path>
+        <path d="M5.5 9.5V21H18.5V9.5"></path>
+        <path d="M10 21V14H14V21"></path>
+    </svg>
+
+</button>
+<script>
+// Back To Top Button
+const backToTopButton = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        backToTopButton.classList.add("show");
+    } else {
+        backToTopButton.classList.remove("show");
+    }
+});
+
+backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
+</body>
+</html>

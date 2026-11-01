@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Analyze food waste and discover smarter ways to save with ECHO">
+
+    <title>Waste Analyzer | ECHO</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/waste.css">
+</head>
+<button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+    ↑
+</button>
+<script src="js/back-to-top.js"></script>
+<body>
+
+<div class="app-container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">E</div>
+            <span>ECHO</span>
+        </div>
+
+        <p class="menu-label">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+
+            <a href="index.html" class="nav-link">
+                <span>▦</span> Dashboard
+            </a>
+
+            <a href="pantry.html" class="nav-link">
+                <span>▤</span> My Pantry
+            </a>
+
+            <a href="expiry.html" class="nav-link">
+                <span>◷</span> Expiry Tracker
+            </a>
+
+            <a href="waste.html" class="nav-link active">
+                <span>♧</span> Waste Analyzer
+            </a>
+
+            <a href="index.html" class="nav-link">
+                <span>✧</span> Smart Suggestions
+            </a>
+
+            <a href="index.html" class="nav-link">
+                <span>▥</span> Reports
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>SMART LIVING</p>
+            <h3>Less Waste.<br>More Value.</h3>
+            <span>Make every resource count.</span>
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <p class="date-label">YOUR SMART FOOD COMPANION</p>
+                <h2>Waste Analyzer</h2>
+            </div>
+
+            <div class="profile">
+                <div class="profile-avatar">U</div>
+
+                <div>
+                    <strong>My Account</strong>
+                    <p>Personal Dashboard</p>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- Hero Section -->
+
+        <section class="waste-hero">
+
+            <div>
+
+                <span class="welcome-tag">
+                    FOOD WASTE INTELLIGENCE
+                </span>
+
+                <h1>
+                    Understand your waste.<br>
+                    <span>Protect your value.</span>
+                </h1>
+
+                <p>
+                    Discover where your food value goes
+                    and make smarter consumption decisions.
+                </p>
+
+                <a href="pantry.html" class="waste-hero-btn">
+                    Review My Pantry ↗
+                </a>
+
+            </div>
+
+            <div class="waste-illustration">
+                ♻️
+            </div>
+
+        </section>
+
+
+        <!-- Main Statistics -->
+
+        <section class="waste-stats">
+
+            <div class="waste-stat-card">
+
+                <span>Total Waste Value</span>
+
+                <h2 id="totalWasteValue">0.00 EGP</h2>
+
+                <p>Value of expired products</p>
+
+            </div>
+
+
+            <div class="waste-stat-card">
+
+                <span>At-Risk Value</span>
+
+                <h2 id="atRiskValue">0.00 EGP</h2>
+
+                <p>Value of products expiring soon</p>
+
+            </div>
+
+
+            <div class="waste-stat-card">
+
+                <span>Expired Products</span>
+
+                <h2 id="wastedProducts">0</h2>
+
+                <p>Products past expiry date</p>
+
+            </div>
+
+
+            <div class="waste-stat-card">
+
+                <span>Potential Savings</span>
+
+                <h2 id="potentialSavings">0.00 EGP</h2>
+
+                <p>Value you could protect</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Analytics Section -->
+
+        <section class="waste-analytics">
+
+            <div class="analytics-heading">
+
+                <div>
+                    <h2>Waste Analysis</h2>
+
+                    <p>
+                        Understand your food management performance.
+                    </p>
+                </div>
+
+                <span class="live-indicator">
+                    ● LIVE DATA
+                </span>
+
+            </div>
+
+
+            <div class="analytics-grid">
+
+                <!-- Category Analysis -->
+
+                <div class="analytics-card">
+
+                    <h3>Waste by Category</h3>
+
+                    <p class="analytics-description">
+                        Which food categories need more attention?
+                    </p>
+
+                    <div id="categoryAnalysis">
+
+                        <div class="analytics-empty">
+                            Category analysis will appear here.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Intelligence Score -->
+
+                <div class="analytics-card">
+
+                    <h3>Food Waste Score</h3>
+
+                    <p class="analytics-description">
+                        Your food management performance.
+                    </p>
+
+                    <div class="waste-score-container">
+
+                        <div class="waste-score">
+                            <strong id="wasteScore">100</strong>
+                            <span>/100</span>
+                        </div>
+
+                        <div class="score-progress">
+                            <div id="scoreProgress"></div>
+                        </div>
+
+                        <p id="scoreMessage">
+                            Start managing your food smarter!
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Smart Recommendations -->
+
+        <section class="recommendations-section">
+
+            <div class="recommendations-heading">
+
+                <div>
+                    <h2>Smart Recommendations</h2>
+
+                    <p>
+                        Practical suggestions based on your pantry data.
+                    </p>
+                </div>
+
+                <span>✧ ECHO Intelligence</span>
+
+            </div>
+
+
+            <div id="recommendationsList">
+
+                <div class="recommendation-empty">
+                    Your personalized recommendations will appear here.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+
+        <footer>
+            <p>© 2026 ECHO. Smart Living Starts Here.</p>
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="js/waste.js"></script>
+
+</body>
+</html>

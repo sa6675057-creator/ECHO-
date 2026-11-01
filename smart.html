@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Smart food suggestions by ECHO">
+    <title>Smart Suggestions | ECHO</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/smart.css">
+</head>
+<button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+    ↑
+</button>
+<script src="js/back-to-top.js"></script>
+<body>
+
+<div class="app-container">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">E</div>
+            <span>ECHO</span>
+        </div>
+
+        <p class="menu-label">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+
+            <a href="index.html" class="nav-link">
+                <span>▦</span> Dashboard
+            </a>
+
+            <a href="pantry.html" class="nav-link">
+                <span>▤</span> My Pantry
+            </a>
+
+            <a href="expiry.html" class="nav-link">
+                <span>◷</span> Expiry Tracker
+            </a>
+
+            <a href="waste.html" class="nav-link">
+                <span>♧</span> Waste Analyzer
+            </a>
+
+            <a href="smart.html" class="nav-link active">
+                <span>✧</span> Smart Suggestions
+            </a>
+
+            <a href="index.html" class="nav-link">
+                <span>▥</span> Reports
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>SMART LIVING</p>
+            <h3>Less Waste.<br>More Value.</h3>
+            <span>Make every resource count.</span>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="date-label">YOUR SMART FOOD COMPANION</p>
+                <h2>Smart Suggestions</h2>
+            </div>
+
+            <div class="profile">
+                <div class="profile-avatar">U</div>
+                <div>
+                    <strong>My Account</strong>
+                    <p>Personal Dashboard</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+
+        <section class="smart-hero">
+
+            <div>
+                <span class="welcome-tag">
+                    INTELLIGENT FOOD MANAGEMENT
+                </span>
+
+                <h1>
+                    Think smarter.<br>
+                    <span>Waste less.</span>
+                </h1>
+
+                <p>
+                    Personalized suggestions based on your food inventory.
+                    Save food, protect your money and make better decisions.
+                </p>
+            </div>
+
+            <div class="smart-illustration">✧</div>
+
+        </section>
+
+        <!-- Smart Insights -->
+
+        <section class="smart-insights">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Your Food Insights</h2>
+                    <p>Discover what needs your attention.</p>
+                </div>
+            </div>
+
+            <div class="insights-grid">
+
+                <div class="insight-card">
+                    <span>Products Analyzed</span>
+                    <h2 id="analyzedCount">0</h2>
+                </div>
+
+                <div class="insight-card">
+                    <span>Priority Products</span>
+                    <h2 id="priorityCount">0</h2>
+                </div>
+
+                <div class="insight-card">
+                    <span>Potential Savings</span>
+                    <h2 id="savingsValue">0.00 EGP</h2>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Suggestions -->
+
+        <section class="suggestions-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Personalized Suggestions</h2>
+                    <p>
+                        Recommendations generated from your pantry data.
+                    </p>
+                </div>
+
+                <button id="refreshSuggestions" class="refresh-btn">
+                    ↻ Refresh
+                </button>
+            </div>
+
+            <div class="suggestions-list" id="suggestionsList">
+
+                <div class="suggestion-empty">
+                    <div>✧</div>
+                    <h3>Analyzing your pantry...</h3>
+                    <p>Your personalized suggestions will appear here.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>© 2026 ECHO. Smart Living Starts Here.</p>
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/smart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+
+/* =================================
+   ECHO EXPIRY TRACKER
+================================= */
+
+.expiry-hero {
+    background: linear-gradient(120deg, #294d38, #64816b);
+    border-radius: 20px;
+    padding: 48px 44px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    min-height: 260px;
+}
+
+.expiry-hero h1 {
+    font-size: 38px;
+    line-height: 1.35;
+    margin: 22px 0 12px;
+}
+
+.expiry-hero h1 span {
+    color: #d6e8b5;
+}
+
+.expiry-hero p {
+    color: #e5eee5;
+    font-size: 14px;
+}
+
+.expiry-illustration {
+    font-size: 85px;
+    margin-right: 30px;
+}
+
+.expiry-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.expiry-stat {
+    background: white;
+    border: 1px solid #e7ebe4;
+    border-radius: 15px;
+    padding: 24px;
+}
+
+.expiry-stat span {
+    color: #829087;
+    font-size: 13px;
+}
+
+.expiry-stat h2 {
+    color: #294d38;
+    font-size: 29px;
+    margin-top: 12px;
+}
+
+.expiry-section {
+    background: white;
+    border: 1px solid #e7ebe4;
+    border-radius: 17px;
+    padding: 26px;
+}
+
+.expiry-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.expiry-heading h2 {
+    color: #263b30;
+    font-size: 22px;
+}
+
+.expiry-heading p {
+    color: #849087;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.expiry-filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.expiry-filter {
+    background: #f4f6f1;
+    color: #52665a;
+    border: 1px solid #e4e9e1;
+    padding: 11px 19px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.expiry-filter:hover,
+.expiry-filter.active {
+    background: #52765b;
+    color: white;
+    border-color: #52765b;
+}
+
+.expiry-products {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.expiry-product-card {
+    border: 1px solid #e8ece6;
+    border-radius: 13px;
+    padding: 21px;
+    transition: 0.2s;
+}
+
+.expiry-product-card:hover {
+    border-color: #9caf9c;
+    transform: translateY(-2px);
+}
+
+.expiry-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 17px;
+}
+
+.expiry-category {
+    color: #7b8b7e;
+    font-size: 12px;
+}
+
+.expiry-status {
+    font-size: 11px;
+    padding: 7px 11px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.expiry-status.safe {
+    background: #eaf3e9;
+    color: #3e754b;
+}
+
+.expiry-status.expiring {
+    background: #fff1d9;
+    color: #a66b17;
+}
+
+.expiry-status.expired {
+    background: #fce8e6;
+    color: #ba4848;
+}
+
+.expiry-product-card h3 {
+    color: #294d38;
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.expiry-details {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.expiry-details p {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 13px;
+    color: #849087;
+}
+
+.expiry-details strong {
+    color: #35483b;
+    text-align: right;
+}
+
+.expiry-countdown {
+    margin-top: 17px;
+    padding: 11px;
+    border-radius: 8px;
+    background: #f4f6f1;
+    color: #52765b;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.expiry-countdown.expiring {
+    background: #fff5e4;
+    color: #a66b17;
+}
+
+.expiry-countdown.expired {
+    background: #fceeed;
+    color: #ba4848;
+}
+
+.expiry-empty {
+    grid-column: 1 / -1;
+    padding: 45px 15px;
+    text-align: center;
+    color: #87948a;
+    background: #f8faf6;
+    border-radius: 12px;
+}
+
+.expiry-empty h3 {
+    color: #294d38;
+    margin: 12px 0 7px;
+}
+
+@media (max-width: 900px) {
+    .expiry-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .expiry-hero {
+        padding: 28px 22px;
+    }
+
+    .expiry-hero h1 {
+        font-size: 28px;
+    }
+
+    .expiry-illustration {
+        font-size: 45px;
+        margin-right: 0;
+    }
+
+    .expiry-products {
+        grid-template-columns: 1fr;
+    }
+
+    .expiry-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .expiry-stats {
+        gap: 10px;
+    }
+
+    .expiry-stat {
+        padding: 16px;
+    }
+}

@@ -1,0 +1,253 @@
+
+/* =================================
+   ECHO - SMART SUGGESTIONS
+================================= */
+
+.smart-hero {
+    background: linear-gradient(120deg, #294c38, #63836b);
+    border-radius: 20px;
+    padding: 55px 45px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 32px;
+    min-height: 280px;
+}
+
+.smart-hero > div:first-child {
+    max-width: 650px;
+}
+
+.smart-hero .welcome-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #dce9d1;
+    margin-bottom: 18px;
+}
+
+.smart-hero h1 {
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1.2;
+    margin: 0 0 18px;
+    font-weight: 800;
+}
+
+.smart-hero h1 span {
+    color: #d6e8b0;
+}
+
+.smart-hero p {
+    color: #f0f4ed;
+    line-height: 1.8;
+    max-width: 550px;
+    margin: 0;
+}
+
+.smart-illustration {
+    font-size: 100px;
+    color: #d6e8b0;
+    flex-shrink: 0;
+}
+
+.smart-insights,
+.suggestions-section {
+    margin-bottom: 30px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    font-size: 22px;
+    color: #203b2d;
+    margin: 0 0 7px;
+}
+
+.section-heading p {
+    color: #829087;
+    font-size: 13px;
+    margin: 0;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.insight-card {
+    background: #fff;
+    border: 1px solid #e7ebe4;
+    border-radius: 16px;
+    padding: 25px;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.insight-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(30, 60, 40, 0.07);
+}
+
+.insight-card span {
+    color: #819087;
+    font-size: 13px;
+}
+
+.insight-card h2 {
+    color: #294c38;
+    font-size: 27px;
+    margin: 12px 0 0;
+}
+
+.refresh-btn {
+    background: #eaf1e9;
+    color: #345d42;
+    border: 1px solid #dce8db;
+    border-radius: 10px;
+    padding: 11px 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.refresh-btn:hover {
+    background: #dce9d9;
+}
+
+.suggestions-list {
+    display: grid;
+    gap: 15px;
+}
+
+.suggestion-card {
+    background: #fff;
+    border: 1px solid #e7ebe4;
+    border-radius: 16px;
+    padding: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 18px;
+    transition: 0.2s;
+}
+
+.suggestion-card:hover {
+    border-color: #b8cbb8;
+    transform: translateY(-2px);
+}
+
+.suggestion-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.suggestion-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #edf4e9;
+    border-radius: 13px;
+    font-size: 21px;
+}
+
+.suggestion-text h3 {
+    color: #294c38;
+    font-size: 16px;
+    margin: 2px 0 8px;
+}
+
+.suggestion-text p {
+    color: #7d8b80;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.suggestion-status {
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-high {
+    background: #fff0e7;
+    color: #c66c37;
+}
+
+.status-medium {
+    background: #fff7df;
+    color: #a77a20;
+}
+
+.status-low {
+    background: #eaf3e9;
+    color: #4c7957;
+}
+
+.suggestion-empty {
+    background: #fff;
+    border: 1px dashed #cdd9cb;
+    border-radius: 16px;
+    padding: 45px 20px;
+    text-align: center;
+}
+
+.suggestion-empty div {
+    font-size: 38px;
+    color: #63836b;
+    margin-bottom: 12px;
+}
+
+.suggestion-empty h3 {
+    color: #294c38;
+    margin: 0 0 8px;
+}
+
+.suggestion-empty p {
+    color: #87948a;
+    font-size: 13px;
+}
+
+@media (max-width: 900px) {
+    .insights-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .smart-hero {
+        padding: 30px 22px;
+        min-height: auto;
+    }
+
+    .smart-illustration {
+        font-size: 55px;
+    }
+
+    .insights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .suggestion-card {
+        flex-direction: column;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+    }
+}

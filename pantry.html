@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage your food inventory with ECHO">
+    <title>My Pantry | ECHO</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pantry.css">
+</head>
+<button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+    ↑
+</button>
+<script src="js/back-to-top.js"></script>
+<body>
+
+<div class="app-container">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">E</div>
+            <span>ECHO</span>
+        </div>
+
+        <p class="menu-label">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-link">
+                <span>▦</span> Dashboard
+            </a>
+
+            <a href="pantry.html" class="nav-link active">
+                <span>▤</span> My Pantry
+            </a>
+<a href="expiry.html" class="nav-link">
+    <span>◷</span> Expiry Tracker
+</a>
+           
+            <a href="index.html" class="nav-link">
+                <span>♧</span> Waste Analyzer
+            </a>
+
+            <a href="index.html" class="nav-link">
+                <span>✧</span> Smart Suggestions
+            </a>
+
+            <a href="index.html" class="nav-link">
+                <span>▥</span> Reports
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>SMART LIVING</p>
+            <h3>Less Waste.<br>More Value.</h3>
+            <span>Make every resource count.</span>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="date-label">YOUR SMART FOOD COMPANION</p>
+                <h2>My Pantry</h2>
+            </div>
+
+            <div class="profile">
+                <div class="profile-avatar">U</div>
+                <div>
+                    <strong>My Account</strong>
+                    <p>Personal Dashboard</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="pantry-hero">
+            <div>
+                <span class="welcome-tag">YOUR FOOD INVENTORY</span>
+                <h1>Know what you have.<br><span>Waste less.</span></h1>
+                <p>Keep track of your food products and their expiry dates.</p>
+            </div>
+
+            <div class="pantry-illustration">🥬</div>
+        </section>
+
+        <!-- Statistics -->
+
+        <section class="pantry-stats">
+
+            <div class="pantry-stat">
+                <span>Total Products</span>
+                <h2 id="totalProducts">0</h2>
+            </div>
+
+            <div class="pantry-stat">
+                <span>Expiring Soon</span>
+                <h2 id="expiringProducts">0</h2>
+            </div>
+
+            <div class="pantry-stat">
+                <span>Expired Products</span>
+                <h2 id="expiredProducts">0</h2>
+            </div>
+
+        </section>
+
+        <!-- Products Section -->
+
+        <section class="products-section">
+
+            <div class="products-heading">
+                <div>
+                    <h2>Your Products</h2>
+                    <p>Manage everything stored in your pantry.</p>
+                </div>
+
+                <button class="add-product-btn" id="openFormBtn">
+                    + Add Product
+                </button>
+            </div>
+
+            <!-- Add Product Form -->
+
+            <div class="product-form-card" id="productFormCard" hidden>
+
+                <div class="form-heading">
+                    <div>
+                        <h3 id="formTitle">Add New Product</h3>
+                        <p>Enter your product information below.</p>
+                    </div>
+
+                    <button type="button" class="close-form" id="closeFormBtn">×</button>
+                </div>
+
+                <form id="productForm">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="productName">Product Name</label>
+                            <input type="text" id="productName"
+                                   placeholder="e.g. Fresh Milk" required
+                                   maxlength="60">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productCategory">Category</label>
+                            <select id="productCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="Dairy">Dairy</option>
+                                <option value="Vegetables">Vegetables</option>
+                                <option value="Fruits">Fruits</option>
+                                <option value="Meat">Meat</option>
+                                <option value="Grains">Grains</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productQuantity">Quantity</label>
+                            <input type="number" id="productQuantity"
+                                   min="0.01" step="0.01"
+                                   placeholder="e.g. 2" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productUnit">Unit</label>
+                            <select id="productUnit" required>
+                                <option value="Pieces">Pieces</option>
+                                <option value="Kg">Kg</option>
+                                <option value="Grams">Grams</option>
+                                <option value="Liters">Liters</option>
+                                <option value="Packages">Packages</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productExpiry">Expiry Date</label>
+                            <input type="date" id="productExpiry" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productPrice">Price (EGP)</label>
+                            <input type="number" id="productPrice"
+                                   min="0" step="0.01"
+                                   placeholder="e.g. 50" required>
+                        </div>
+
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="cancel-btn"
+                                id="cancelFormBtn">Cancel</button>
+
+                        <button type="submit" class="save-btn"
+                                id="saveProductBtn">Save Product</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <!-- Search and Filter -->
+
+            <div class="product-toolbar">
+
+                <input type="search" id="searchInput"
+                       placeholder="Search products...">
+
+                <select id="categoryFilter">
+                    <option value="All">All Categories</option>
+                    <option value="Dairy">Dairy</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="Meat">Meat</option>
+                    <option value="Grains">Grains</option>
+                    <option value="Other">Other</option>
+                </select>
+
+            </div>
+
+            <!-- Products List -->
+
+            <div class="products-grid" id="productsGrid">
+
+                <div class="empty-products">
+                    <div>🥗</div>
+                    <h3>Your pantry is waiting!</h3>
+                    <p>Start by adding your first food product.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>© 2026 ECHO. Smart Living Starts Here.</p>
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/pantry.js"></script>
+
+</body>
+</html>

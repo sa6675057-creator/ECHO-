@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Track food expiry dates with ECHO">
+
+    <title>Expiry Tracker | ECHO</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/expiry.css">
+</head>
+<button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+    ↑
+</button>
+<script src="js/back-to-top.js"></script>
+<body>
+
+<div class="app-container">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">E</div>
+            <span>ECHO</span>
+        </div>
+
+        <p class="menu-label">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+
+            <a href="index.html" class="nav-link">
+                <span>▦</span> Dashboard
+            </a>
+
+            <a href="pantry.html" class="nav-link">
+                <span>▤</span> My Pantry
+            </a>
+
+            <a href="expiry.html" class="nav-link active">
+                <span>◷</span> Expiry Tracker
+            </a>
+
+            <a href="index.html" class="nav-link">
+                <span>♧</span> Waste Analyzer
+            </a>
+
+            <a href="index.html" class="nav-link">
+                <span>✧</span> Smart Suggestions
+            </a>
+
+            <a href="index.html" class="nav-link">
+                <span>▥</span> Reports
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>SMART LIVING</p>
+            <h3>Less Waste.<br>More Value.</h3>
+            <span>Make every resource count.</span>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <p class="date-label">YOUR SMART FOOD COMPANION</p>
+                <h2>Expiry Tracker</h2>
+            </div>
+
+            <div class="profile">
+                <div class="profile-avatar">U</div>
+
+                <div>
+                    <strong>My Account</strong>
+                    <p>Personal Dashboard</p>
+                </div>
+            </div>
+
+        </header>
+
+        <section class="expiry-hero">
+
+            <div>
+                <span class="welcome-tag">SMART EXPIRY MONITORING</span>
+
+                <h1>
+                    Stay ahead of<br>
+                    <span>food expiration.</span>
+                </h1>
+
+                <p>
+                    Monitor your food products and prevent unnecessary waste.
+                </p>
+
+            </div>
+
+            <div class="expiry-illustration">⏳</div>
+
+        </section>
+
+        <!-- Statistics -->
+
+        <section class="expiry-stats">
+
+            <div class="expiry-stat">
+                <span>Total Products</span>
+                <h2 id="expiryTotal">0</h2>
+            </div>
+
+            <div class="expiry-stat">
+                <span>Expiring Soon</span>
+                <h2 id="expirySoon">0</h2>
+            </div>
+
+            <div class="expiry-stat">
+                <span>Expired Products</span>
+                <h2 id="expiryExpired">0</h2>
+            </div>
+
+            <div class="expiry-stat">
+                <span>Safe Products</span>
+                <h2 id="expirySafe">0</h2>
+            </div>
+
+        </section>
+
+        <!-- Filters -->
+
+        <section class="expiry-section">
+
+            <div class="expiry-heading">
+
+                <div>
+                    <h2>Expiry Overview</h2>
+                    <p>Prioritize products that need your attention.</p>
+                </div>
+
+                <a href="pantry.html" class="add-product-btn">
+                    + Manage Pantry
+                </a>
+
+            </div>
+
+            <div class="expiry-filters">
+
+                <button class="expiry-filter active" data-filter="all">
+                    All Products
+                </button>
+
+                <button class="expiry-filter" data-filter="expiring">
+                    Expiring Soon
+                </button>
+
+                <button class="expiry-filter" data-filter="expired">
+                    Expired
+                </button>
+
+                <button class="expiry-filter" data-filter="safe">
+                    Safe
+                </button>
+
+            </div>
+
+            <!-- Products -->
+
+            <div class="expiry-products" id="expiryProducts">
+
+                <div class="expiry-empty">
+                    Loading products...
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>© 2026 ECHO. Smart Living Starts Here.</p>
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/expiry.js"></script>
+
+</body>
+</html>
